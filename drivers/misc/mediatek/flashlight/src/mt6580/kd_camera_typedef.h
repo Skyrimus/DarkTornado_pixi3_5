@@ -1,19 +1,7 @@
-/*
- * Copyright (C) 2015 MediaTek Inc.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as
- * published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- */
+#ifndef _CAMERA_TYPEDEFS_H
+#define _CAMERA_TYPEDEFS_H
 
-#ifndef _KD_FLASHLIGHT_TYPE_H
-#define _KD_FLASHLIGHT_TYPE_H
-
+#include <linux/bug.h>
 
 /* ------------------------*/
 /* Basic Type Definitions */
@@ -80,6 +68,8 @@ typedef short *LPWSTR;
 #define NULL  (0)
 #endif
 
+/* enum boolean {false, true}; */
+enum { RX, TX, NONE };
 
 #ifndef BOOL
 typedef unsigned char BOOL;
@@ -90,9 +80,4 @@ typedef enum {
 	KAL_TRUE = 1,
 } kal_bool;
 
-/* temp define for 3643 dual functions */
-int flashEnable_lm3643_2(void);
-int flashDisable_lm3643_2(void);
-int setDuty_lm3643_2(int duty);
-
-#endif				/* _KD_FLASHLIGHT_TYPE_H */
+#endif				/* _CAMERA_TYPEDEFS_H */
